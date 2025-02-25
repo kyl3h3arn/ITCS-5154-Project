@@ -4,11 +4,11 @@
 #### Paper: https://www.sciencedirect.com/science/article/pii/S1877050921014629
 ## Project Topic
 - Bring machine learning (ML) to an area of interest <br/>
-- My Choice: Cancer Research <br/>
+- **My Choice:** Cancer Research <br/>
 - Motivation: Personal Connection, intriguing research, potential to future work. <br/>
 ## Project Goal
 - Duplicate how others solve the problem or practice what you have learned in this course to solve the problem. <br/>
-- My Goal: Test different ML algorithms to see which is best at predicting and/or diagnosing breast cancer. <br/>
+- **My Goal:** Test different ML algorithms to see which is best at predicting and/or diagnosing breast cancer. <br/>
 ## About
 ### This project aims to recreate a paper that tests five machine learning algorithms on the Wisconsin Breast Cancer Dataset: <br/>
 - Support Vector Machine (SVM)
