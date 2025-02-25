@@ -10,7 +10,7 @@
 - Duplicate how others solve the problem or practice what you have learned in this course to solve the problem. <br/>
 - **My Goal:** Test different ML algorithms to see which is best at predicting and/or diagnosing breast cancer. <br/>
 ## About
-### This project aims to recreate a paper that tests five machine learning algorithms on the Wisconsin Breast Cancer Dataset: <br/>
+### This project aims to recreate research paper code that tests five machine learning algorithms on the Wisconsin Breast Cancer Dataset: <br/>
 - Support Vector Machine (SVM)
 - Random Forest
 - Logistic Regression
