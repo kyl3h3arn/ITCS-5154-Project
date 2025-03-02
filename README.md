@@ -25,3 +25,17 @@
 - Two additional models will be added to see if there were any improvements (TBD)
 
 ## Results
+### Accuracy Comparison:
+- Our results are highly consistent with the paper, particularly for SVM and Random Forest, which match exactly.
+- Our Logistic Regression model performed better (97.9%) than in the paper (95.8%), indicating it generalizes slightly better on the dataset.
+- Our KNN model also performed better (95.8% vs. 93.7%), suggesting possible improvements due to data preprocessing or scaling.
+### AUC Comparison:
+- The paper found that SVM had the highest AUC (0.966), followed by Random Forest (0.960).
+- Our SVM, Random Forest, Logistic Regression, and MLP achieved perfect AUC (1.00), which suggests potential overfitting or an extremely well-separated dataset.
+- Possible reasons for AUC differences:
+- Improved feature scaling or preprocessing in our implementation.
+- Different dataset splits (the paper used a 75-25% split, but variations could affect results).
+### Confusion Matrix Comparison:
+- The confusion matrices in our results are quite similar to the paper's results.
+- SVM in both cases shows very few misclassifications, reinforcing that it is the best model for this dataset.
+- Random Forest and Logistic Regression also show strong performance with minimal false positives and false negatives.
