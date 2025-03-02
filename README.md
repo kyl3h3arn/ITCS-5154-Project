@@ -22,7 +22,9 @@
 - Logistic Regression
 - Decision tree (C4.5)
 - K-Nearest Neighbours (KNN) <br/>
-- Two additional models will be added to see if there were any improvements (TBD)
+- Two additional models will be added to test for better results:
+  - Extreme Gradirent Boost (XGBoost)
+  - Multi-Layer Perceptron (MLP)
 
 ## Results
 ### Accuracy Comparison:
