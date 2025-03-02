@@ -39,3 +39,12 @@
 - The confusion matrices in our results are quite similar to the paper's results.
 - SVM in both cases shows very few misclassifications, reinforcing that it is the best model for this dataset.
 - Random Forest and Logistic Regression also show strong performance with minimal false positives and false negatives.
+### New Model Comparison:
+- XGBoost & MLP outperform Decision Tree and KNN from the paper while matching or approaching Random Forest and SVM.
+- SVM still remains the best model, consistent with the paper's findings.
+- XGBoost shows promise as a strong alternative to Random Forest, with similar performance but improved optimization.
+  - Benefits from boosting techniques, which help reduce overfitting and improve classification.
+- MLP's deep learning approach performs well, suggesting that neural networks could be useful for medical classification tasks.
+  - Deep learning models like MLP may capture non-linear patterns better than Decision Trees and Logistic Regression.
+  - Can be computationally expensive but works well if enough data is available.
+
