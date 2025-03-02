@@ -33,8 +33,8 @@
 - The paper found that SVM had the highest AUC (0.966), followed by Random Forest (0.960).
 - Our SVM, Random Forest, Logistic Regression, and MLP achieved perfect AUC (1.00), which suggests potential overfitting or an extremely well-separated dataset.
 - Possible reasons for AUC differences:
-- Improved feature scaling or preprocessing in our implementation.
-- Different dataset splits (the paper used a 75-25% split, but variations could affect results).
+  - Improved feature scaling or preprocessing in our implementation.
+  - Different dataset splits (the paper used a 75-25% split, but variations could affect results).
 ### Confusion Matrix Comparison:
 - The confusion matrices in our results are quite similar to the paper's results.
 - SVM in both cases shows very few misclassifications, reinforcing that it is the best model for this dataset.
