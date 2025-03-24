@@ -96,6 +96,11 @@ Breast cancer is one of the most commonly diagnosed cancers in women and a leadi
 4. [WBCD Dataset on Kaggle](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)  
 5. Kumar & Arumugam, 2021 - *Procedia Computer Science*  
 6. Kumar & Arumugam, 2023 - *Journal of Education and Health Promotion*  
+---
+
+## 📄 Final Report
+
+[Click here to view the full project report (DOCX)](Final%20Project%20Report.docx)
 
 ---
 
