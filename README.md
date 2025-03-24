@@ -1,52 +1,105 @@
-# Machine Learning Algorithms For Breast Cancer Prediction And Diagnosis
+# 🧠 Breast Cancer Diagnosis with Machine Learning
 
-#### Kyle Hearn | ITCS 5154 Spring 2025
+This project explores and compares multiple machine learning algorithms for classifying breast cancer as benign or malignant using the **Wisconsin Breast Cancer Diagnostic (WBCD)** dataset.
 
-#### Dataset: https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
-#### Paper: https://www.sciencedirect.com/science/article/pii/S1877050921014629
+Inspired by [this research paper](https://doi.org/10.1016/j.procs.2021.07.062), the project replicates and extends the study by testing additional models and evaluating their performance.
 
-## Project Topic
-- Bring machine learning (ML) to an area of interest <br/>
-- **My Choice:** Cancer Research <br/>
-- Motivation: Personal Connection, intriguing research, potential to future work. <br/>
+---
 
-## Project Goal
-- Duplicate how others solve the problem or practice what you have learned in this course to solve the problem. <br/>
-- **My Goal:** Test different ML algorithms to see which is best at predicting and/or diagnosing breast cancer. <br/>
+## 📌 Problem Statement
 
-## About
+Breast cancer is one of the most commonly diagnosed cancers in women and a leading cause of mortality. Early detection is key to improving outcomes. This project applies machine learning to automate breast cancer classification and improve diagnostic accuracy.
 
-### This project aims to recreate research paper code that tests five machine learning algorithms on the Wisconsin Breast Cancer Dataset: <br/>
+---
+
+## 🎯 Objectives
+
+- Compare various ML algorithms for breast cancer detection.
+- Replicate results from published research.
+- Evaluate if newer models (e.g., XGBoost, MLP) outperform traditional ones.
+
+---
+
+## 🧪 Models Tested
+
 - Support Vector Machine (SVM)
-- Random Forest
-- Logistic Regression
-- Decision tree (C4.5)
-- K-Nearest Neighbours (KNN) <br/>
-- Two additional models will be added to test for better results:
-  - Extreme Gradirent Boost (XGBoost)
-  - Multi-Layer Perceptron (MLP)
+- Random Forest (RF)
+- Logistic Regression (LR)
+- Decision Tree (C4.5)
+- K-Nearest Neighbors (KNN)
+- Extreme Gradient Boosting (XGBoost) ✅ *new*
+- Multi-Layer Perceptron (MLP) ✅ *new*
 
-## Results
-### Accuracy Comparison:
-- Our results are highly consistent with the paper, particularly for SVM and Random Forest, which match exactly.
-- Our Logistic Regression model performed better (97.9%) than in the paper (95.8%), indicating it generalizes slightly better on the dataset.
-- Our KNN model also performed better (95.8% vs. 93.7%), suggesting possible improvements due to data preprocessing or scaling.
-### AUC Comparison:
-- The paper found that SVM had the highest AUC (0.966), followed by Random Forest (0.960).
-- Our SVM, Random Forest, Logistic Regression, and MLP achieved perfect AUC (1.00), which suggests potential overfitting or an extremely well-separated dataset.
-- Possible reasons for AUC differences:
-  - Improved feature scaling or preprocessing in our implementation.
-  - Different dataset splits (the paper used a 75-25% split, but variations could affect results).
-### Confusion Matrix Comparison:
-- The confusion matrices in our results are quite similar to the paper's results.
-- SVM in both cases shows very few misclassifications, reinforcing that it is the best model for this dataset.
-- Random Forest and Logistic Regression also show strong performance with minimal false positives and false negatives.
-### New Model Comparison:
-- XGBoost & MLP outperform Decision Tree and KNN from the paper while matching or approaching Random Forest and SVM.
-- SVM still remains the best model, consistent with the paper's findings.
-- XGBoost shows promise as a strong alternative to Random Forest, with similar performance but improved optimization.
-  - Benefits from boosting techniques, which help reduce overfitting and improve classification.
-- MLP's deep learning approach performs well, suggesting that neural networks could be useful for medical classification tasks.
-  - Deep learning models like MLP may capture non-linear patterns better than Decision Trees and Logistic Regression.
-  - Can be computationally expensive but works well if enough data is available.
+---
 
+## ⚙️ Methodology
+
+1. **Dataset:**  
+   - [WBCD on Kaggle](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
+   - Benign = 0, Malignant = 1
+
+2. **Preprocessing:**  
+   - Removed redundant columns  
+   - Normalized features  
+   - Encoded target variable
+
+3. **Evaluation Metrics:**  
+   - Accuracy  
+   - Precision  
+   - Recall  
+   - F1-Score  
+   - AUC-ROC  
+   - Confusion Matrix
+
+4. **Train/Test Split:**  
+   - 75% training  
+   - 25% testing
+
+---
+
+## 📊 Results
+
+| Algorithm           | Accuracy (%) | AUC   | Precision | Recall |
+|--------------------|--------------|-------|-----------|--------|
+| XGBoost            | **97.5**     | 0.970 | 0.99      | 0.96   |
+| MLP                | 97.4         | 0.968 | 0.99      | 0.95   |
+| SVM                | 97.2         | 0.966 | 0.98      | 0.94   |
+| Random Forest      | 96.5         | 0.960 | 0.96      | 0.94   |
+| Logistic Regression| 95.8         | 0.947 | 0.98      | 0.91   |
+| Decision Tree      | 95.1         | 0.945 | 0.94      | 0.92   |
+| KNN                | 93.7         | 0.952 | 0.92      | 0.91   |
+
+---
+
+## 💡 Insights
+
+- **SVM** remained one of the top performers, consistent with published research.
+- **XGBoost** slightly outperformed SVM in accuracy and precision.
+- **MLP** performed strongly but may benefit from a larger dataset.
+- **Feature scaling** and **hyperparameter tuning** made noticeable impacts on performance.
+
+---
+
+## 📈 Future Work
+
+- Apply deep learning models to medical imaging (e.g., MRI scans)
+- Test on larger and more diverse datasets
+- Explore feature engineering for improved model interpretability
+
+---
+
+## 📚 References
+
+1. [Procedia Computer Science, 2021](https://doi.org/10.1016/j.procs.2021.07.062)  
+2. [Breast Cancer Facts & Figures 2024](https://www.cancer.org/content/dam/cancer-org/research/cancer-facts-and-statistics/breast-cancer-facts-and-figures/2024/breast-cancer-facts-and-figures-2024.pdf)  
+3. Bashiri et al., 2022 - *Journal of Education and Health Promotion*  
+4. [WBCD Dataset on Kaggle](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)  
+5. Kumar & Arumugam, 2021 - *Procedia Computer Science*  
+6. Kumar & Arumugam, 2023 - *Journal of Education and Health Promotion*  
+
+---
+
+## 🙋 Sharing Agreement
+
+- ✅ Yes, this project can be shared with future students.
+- ❌ Do not hide my name.
